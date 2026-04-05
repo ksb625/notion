@@ -9,15 +9,11 @@ const Code = dynamic(
 )
 
 const Collection = dynamic(
-  () =>
-    import('react-notion-x/build/third-party/collection').then(
-      m => m.Collection
-    )
+  () => import('react-notion-x/build/third-party/collection').then(m => m.Collection)
 )
 
 const Equation = dynamic(
-  () =>
-    import('react-notion-x/build/third-party/equation').then(m => m.Equation)
+  () => import('react-notion-x/build/third-party/equation').then(m => m.Equation)
 )
 
 const Modal = dynamic(
@@ -26,7 +22,6 @@ const Modal = dynamic(
 )
 
 const ROOT_PAGE_ID = '2e7ac7e2940c804495f0dbd8ee2542b3'
-
 const notion = new NotionAPI()
 
 export default function Page({ recordMap }) {
@@ -37,10 +32,10 @@ export default function Page({ recordMap }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="page">
+      <main>
         <NotionRenderer
           recordMap={recordMap}
-          fullPage={false}
+          fullPage
           darkMode={false}
           nextLink={Link}
           components={{

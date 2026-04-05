@@ -3,82 +3,9 @@ body,
 #__next {
   margin: 0;
   padding: 0;
-  width: 100%;
   min-height: 100%;
 }
 
 body {
   overflow-x: hidden;
-  background: #ffffff;
-  font-family: sans-serif;
-}
-
-.page {
-  width: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-  padding: 24px 20px;
-}
-
-/* react-notion-x 기본 폭 보정 */
-.notion {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.notion-page {
-  width: 100%;
-  max-width: 100%;
-  padding: 0 !important;
-  margin: 0 auto;
-}
-
-.notion-page-content,
-.notion-page-scroller,
-.notion-page-body {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-/* 긴 한글/파일명/링크 줄바꿈 */
-.notion * {
-  word-break: keep-all;
-  overflow-wrap: break-word;
-}
-
-/* callout, list, text 블록이 부모 폭 넘지 않게 */
-.notion-callout,
-.notion-text,
-.notion-list,
-.notion-quote,
-.notion-toggle,
-.notion-collection {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* 링크 클릭 영역 보장 */
-.notion a {
-  pointer-events: auto;
-  text-decoration: none;
-}
-
-/* 모바일/좁은 iframe 대응 */
-@media (max-width: 768px) {
-  .page {
-    padding: 16px 12px;
-  }
-
-  .notion-page-content,
-  .notion-page-scroller,
-  .notion-page-body {
-    max-width: 100%;
-  }
-
-  .notion h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
 }
