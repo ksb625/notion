@@ -19,7 +19,7 @@ export default function Home({ recordMap }) {
 
 export async function getStaticProps() {
   const notion = new NotionAPI()
-  const recordMap = await notion.getPage('여기에_노션_페이지_ID')
+  const recordMap = await notion.getPage('2e7ac7e2940c804495f0dbd8ee2542b3')
 
   return {
     props: { recordMap },
