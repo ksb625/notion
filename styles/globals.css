@@ -10,7 +10,11 @@ body {
   overflow-x: hidden;
 }
 
-.notion {
-    overflow-wrap: break-word;
-    word-break: keep-all;
-  }
+.notion-text,
+.notion-list li,
+.notion-list-item {
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  line-break: auto;
+}
