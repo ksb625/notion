@@ -1,14 +1,8 @@
 import Head from 'next/head'
 import { NotionAPI } from 'notion-client'
 import { NotionRenderer } from 'react-notion-x'
-import 'react-notion-x/src/styles.css'
-import '../styles/globals.css'
 
-type HomeProps = {
-  recordMap: any
-}
-
-export default function Home({ recordMap }: HomeProps) {
+export default function Home({ recordMap }) {
   return (
     <>
       <Head>
@@ -25,10 +19,7 @@ export default function Home({ recordMap }: HomeProps) {
 
 export async function getStaticProps() {
   const notion = new NotionAPI()
-
-  const recordMap = await notion.getPage(
-    '2e8ac7e2940c80ac8e8bdbb26b841366'
-  )
+  const recordMap = await notion.getPage('여기에_노션_페이지_ID')
 
   return {
     props: { recordMap },
