@@ -40,7 +40,7 @@ export default function Page({ recordMap }) {
       <main className="page">
         <NotionRenderer
           recordMap={recordMap}
-          fullPage
+          fullPage={false}
           darkMode={false}
           nextLink={Link}
           components={{
